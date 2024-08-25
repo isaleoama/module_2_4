@@ -4,14 +4,18 @@ not_primes = []
 
 for num in numbers:
     is_prime = True
+    if num == 1:
+        numbers = numbers.remove(num)
+        continue
     for i in range(2, num):
         if num % i == 0:
             is_prime = False
             break
+
     if is_prime:
-        primes.append(num)
+            primes.append(num)
     else:
-        not_primes.append(num)
+            not_primes.append(num)
 
 print("Простые числа:", primes)
 print("Непростые числа:", not_primes)
