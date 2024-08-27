@@ -5,12 +5,11 @@ not_primes = []
 for num in numbers:
     is_prime = True
     if num == 1:
-        numbers = numbers.remove(num)
         continue
     for i in range(2, num):
         if num % i == 0:
             is_prime = False
-            break
+        break
 
     if is_prime:
             primes.append(num)
